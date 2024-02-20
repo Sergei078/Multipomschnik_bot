@@ -8,8 +8,7 @@ from text import error, error1
 from System_setting_gpt import max_tokens_in_task, count_tokens
 import threading
 
-TOKEN = input('ТОКЕН:')
-SERVER = input('Сервер')
+TOKEN = input('Введи токен:')
 bot = telebot.TeleBot(TOKEN)
 logging.basicConfig(filename='errors.cod.log', level=logging.ERROR,
                     filemode='a', format='%(asctime)s - %(levelname)s - %(message)s')

@@ -1,7 +1,8 @@
 import requests
 import logging
 from System_setting_gpt import assistant_content, system_content
-from bot import SERVER
+
+SERVER = input('Введи сервер:')
 
 
 class Continue_text_gpt:
@@ -56,6 +57,7 @@ class Question_gpt2:
                 }
             )
             data = resp.json()
+            print(data)
             if resp.status_code < 200 or resp.status_code >= 300:
                 error = 'Произошла ошибка'
                 logging.error(str(resp.status_code))
